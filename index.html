@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+
+
+    <!-- <script type="text/javascript" src="scripts/bootstrap.js"></script> -->
+    <script type="text/javascript" src="scripts/vis.js"></script>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="css/console.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="css/sideBar.css" rel="stylesheet" type="text/css" />
+    <link href="css/vis.css" rel="stylesheet" type="text/css" />
+    <link href="css/DOM.css" rel="stylesheet" type="text/css" />
+    <link href="css/body.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" /> -->
+
+
+
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Instruções de uso</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Adicionando nós : </p>
+                    Para adicionar nós clique no ícone <img src="img/editicon.png" alt="Edit">, e depois em <img src="img/addnodeIcon.png" alt="addNode">
+                    e clique no campo para adicionar os nós.
+                    <p>Ligando os nós : </p>
+                    Para ligar dois nós clique no icone <img src="img/editicon.png" alt="Edit"> e depois em <img src="img/addEdge.png" alt="Edge"> 
+                    e tendo dois nós adicionados ligue eles, arrastando, de um nó para outro, irá abrir uma caixa de diálogo, basta adicionar o valor de transição.
+                    <p>Definindo nó inicial e terminal : </p>
+                    <img src="img/definicaoNo.png" alt="Definição" style="width: 200px"><br>
+                    No campo Nó Inicial defina qual o nó será o nó inicial e clique em salvar, assim definindo qual será o inicial.
+                    No campos Nó Final defina qual nó será o terminal e clique em salvar, assim definindo qual será o final.<br>
+                    O botão limpar serve para limpar a tela dos autômatos.<br>
+                    <p>Para remover ligações :</p>
+                    Para remover uma ligação de nós você precisa clicar em <img src="img/editicon.png"> e depois selecionar a ligação, e depois <img src="img/delete.png">.<br>  
+                    <p>Para testar uma expressão :</p>
+                    Basta digitar uma regra em cima e uma regra no campo de texto em baixo.<br>
+                    <img src="img/entradas.png" alt="Entradas" style="width: 200px"><br>
+                    Se as regras forem aceitas os campos ficarão verdes, caso contrário ficaram vermelhos.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Site completo -->
+    <div class="container-fluid">
+        <div class="row base">
+            <div class="col-3 bar">
+                <div class="row icon">
+                    <i class="fas fa-project-diagram fa-5x"></i>
+
+                    <label>Automatos Finitos</label>
+                </div>
+                <div class="entrys">
+                    <div class="e">
+                        <label>Nó Inicial</label>
+                        <input class="form-control" id="inicial">
+                        <button onclick="inicial()" type="button" class="btn btn-nos btn-outline-success">Salvar</button>
+                    </div>
+                    <div class="e">
+                        <label>Nós Finais</label>
+                        <input class="form-control" id="finais">
+                        <button onclick="finais()" type="button" class="btn btn-nos btn-outline-success">Salvar</button>
+
+                    </div>
+                </div>
+                <div>
+                    <button id="limpar" type="button" class="btn btn-low btn-outline-success">Limpar</button>
+                </div>
+                <div class="sub">
+                    <a><label onmouseover="zoomLabel(this)" onmouseout="zoomOut(this)" data-toggle="modal" data-target="#myModal">Como
+                            utilizar?</label></a>
+                </div>
+            </div>
+            <div class="col-9 dom">
+                <div class="row vis-dom" id="dom">
+
+                </div>
+                <div class="row console">
+                    <div class=" col console-entrys ">
+                        <label>Entradas</label>
+                        <input class="form-control" id="in-1">
+                        <input class="form-control" id="in-2">
+                        <div>
+                            <button onclick="preVerificacao()" type="button" class="btn btn-low btn-outline-success">Testar</button>
+                        </div>
+
+                    </div>
+
+                    <div class="col console-buttons">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="scripts/AF.js"></script>
+</body>
+
+
+</html>

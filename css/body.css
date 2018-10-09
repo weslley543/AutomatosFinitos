@@ -1,0 +1,46 @@
+body{
+    background-color: beige;
+
+}
+
+.container-fluid{
+    height: 100%;
+}
+
+.base{
+    background-color: burlywood;
+    height: 100%;
+}
+
+.bar{
+    background-color: rgb(31, 31, 31);
+
+    border: solid black 3px;
+
+}
+.dom{
+    background-color: #2E2E2E;
+}
+
+.icon{
+    height: 20%;
+    background-color: rgb(24, 24, 24); 
+    justify-content: center;
+    align-items: center;
+}
+
+.icon label{
+    color: white;
+}
+
+.vis-dom{
+    background-color: white;
+    height: 70%;
+}
+
+.console{
+    background-color: #2E2E2E;
+    height: 30%;
+    border-top-width: 3px black;
+
+}
